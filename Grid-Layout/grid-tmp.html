@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Grid - 栅格布局</title>
+    <style>
+        .grid-box {
+            display: grid;
+            width: 1000px;
+            margin: 0 auto;
+            grid-template-columns: [first] 200px 200px 200px 200px 200px;
+            grid-template-rows: 100px 100px 100px 100px;
+            grid-template-areas: 'title title title title aside'
+                                 'nav main main main aside'
+                                 'nav main main main aside'
+                                 'footer footer footer footer footer';
+            grid-column-gap: 20px;
+            grid-row-gap: 10px;
+            font-size: 30px;
+            text-align: center;
+        }
+        
+        .title {
+            grid-area: title;
+            background-color: #08c;
+        }
+        
+        .nav {
+            grid-area: nav;
+            background-color: #cf0;
+        }
+        
+        .main {
+            grid-area: main;
+            background-color: #3c0;
+        }
+        
+        .aside {
+            grid-area: aside;
+            background-color: #c90;
+        }
+        
+        .footer {
+            grid-area: footer;
+            background-color: #f40;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="grid-box">
+        <div class="title">title</div>
+        <div class="nav">nav</div>
+        <div class="main">main</div>
+        <div class="aside">aside</div>
+        <div class="footer">footer</div>
+    </section>
+</body>
+
+</html>

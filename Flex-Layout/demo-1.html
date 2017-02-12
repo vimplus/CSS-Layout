@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>flex 布局</title>
+    <style>
+        .box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .box {
+            width: 300px;
+            height: 300px;
+            background: #09c;
+        }
+        
+        .item {
+            width: 90px;
+            height: 90px;
+            background: #ff0;
+            border-radius: 50%;
+        }
+        
+        .item {
+            flex-grow: 1;
+        }
+        
+        .item:nth-child(2) {
+            flex-shrink: 0;
+            align-self: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <span class="item"></span>
+        <span class="item"></span>
+        <span class="item"></span>
+    </div>
+</body>
+
+</html>

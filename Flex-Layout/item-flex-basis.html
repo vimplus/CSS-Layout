@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>flex 布局</title>
+    <style>
+        .flex-box {
+            display: flex;
+            width: 600px;
+            height: 100px;
+            padding: 10px;
+            background: #08c;
+        }
+        
+        .flex-item {
+            width: 100px;
+            margin: 2px;
+            background: #6c0;
+            text-align: center;
+        }
+        
+        .flex-item:nth-child(3) {
+            flex-basis: 300px;
+        }
+        
+        .flex-item span {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin-top: 30px;
+            font-size: 16px;
+            line-height: 30px;
+            color: #fff;
+            background: #f60;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-box">
+        <div class="flex-item"><span>1</span></div>
+        <div class="flex-item"><span>2</span></div>
+        <div class="flex-item"><span>3</span></div>
+        <div class="flex-item"><span>4</span></div>
+        <div class="flex-item"><span>5</span></div>
+    </div>
+</body>
+
+</html>
