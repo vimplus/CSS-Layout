@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BFC产生外边距合并</title>
+    <style>
+        .wrap {
+            width: 300px;
+            background: #08c;
+        }
+        
+        .side {
+            float: left;
+            width: 120px;
+            height: 200px;
+            background: #6c0;
+        }
+        
+        .main {
+            height: 300px;
+            background: #66c;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="side"></div>
+        <div class="main"></div>
+    </div>
+</body>
+
+</html>

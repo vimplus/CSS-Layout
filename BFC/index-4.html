@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>BFC产生外边距合并</title>
+    <style>
+        .content {
+            width:300px;
+            background: #08c;
+        }
+        .img {
+            float: left;
+            width: 100px;
+            height: 80px;
+            background: #fd0;
+        }
+        .info {
+            overflow: hidden;
+            background: #f66;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="img"></div>
+        <p class="info">一些信息一些信息一些信息一些信息一些信息一些信息一些信息一些信息一些信息一些信息一些信息一些信息一些信息一些信息一些信息一些信息一些信息一些信息</p>
+    </div>
+</body>
+</html>
