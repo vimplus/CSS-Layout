@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>三栏布局</title>
+    <style>
+        html * {
+            padding: 0;
+            margin: 0;
+        }
+        .layout article div {
+            min-height: 100px;
+        }
+        .layout {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 方案一：浮动布局 -->
+    <section class="layout float">
+        <style media="screen">
+            .layout.float .left,
+            .layout.float .right {
+                width: 300px;
+            }
+            .layout.float .left {
+                float: left;
+                background: #f40;
+            }
+            .layout.float .right {
+                float: right;
+                background: #08c;
+            }
+            .layout.float .center {
+                background: #ff0;
+            }
+        </style>
+        <article class="container">
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="center">
+                <h2>浮动解决方案</h2>
+                <p>这是三栏布局中间部分</p>
+            </div>
+        </article>
+    </section>
+
+
+    <!-- 方案二：定位布局 -->
+    <section class="layout absolute">
+        <style media="screen">
+            .layout.absolute {
+                height: 100px;
+            }
+            .layout.absolute .container > div {
+                position: absolute;
+            }
+            .layout.absolute .left,
+            .layout.absolute .right {
+                width: 300px;
+            }
+            .layout.absolute .left {
+                left: 0;
+                background: #f40;
+            }
+            .layout.absolute .right {
+                right: 0;
+                background: #08c;
+            }
+            .layout.absolute .center {
+                left: 300px;
+                right: 300px;
+                background: #ff0;
+            }
+        </style>
+        <article class="container">
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="center">
+                <h2>定位解决方案</h2>
+                <p>这是三栏布局中间部分</p>
+            </div>
+        </article>
+    </section>
+
+    <!-- 方案三：Flex布局 -->
+    <section class="layout flexbox">
+        <style media="screen">
+            .layout.flexbox .container {
+                display: flex;
+            }
+            .layout.flexbox .left,
+            .layout.flexbox .right {
+                width: 300px;
+            }
+            .layout.flexbox .left {
+                background: #f40;
+            }
+            .layout.flexbox .center {
+                flex: 1;
+                background: #ff0;
+            }
+            .layout.flexbox .right {
+                background: #08c;
+            }
+        </style>
+        <article class="container">
+            <div class="left"></div>
+            <div class="center">
+                <h2>Flex解决方案</h2>
+                <p>这是三栏布局中间部分</p>
+            </div>
+            <div class="right"></div>
+        </article>
+    </section>
+
+    <!-- 方案四：表格布局 -->
+    <section class="layout table">
+        <style media="screen">
+            .layout.table .container {
+                display: table;
+                width: 100%;
+                height: 100px;
+            }
+            .layout.table .container > div {
+                display: table-cell;
+            }
+            .layout.table .left,
+            .layout.table .right {
+                width: 300px;
+            }
+            .layout.table .left {
+                background: #f40;
+            }
+            .layout.table .right {
+                background: #08c;
+            }
+            .layout.table .center {
+                background: #ff0;
+            }
+        </style>
+        <article class="container">
+            <div class="left"></div>
+            <div class="center">
+                <h2>Table解决方案</h2>
+                <p>这是三栏布局中间部分</p>
+            </div>
+            <div class="right"></div>
+        </article>
+    </section>
+
+    <!-- 方案五：Grid布局 -->
+    <section class="layout grid">
+        <style media="screen">
+            .layout.grid .container {
+                display: grid;
+                grid-template-rows: 100px;
+                grid-template-columns: 300px auto 300px;
+            }
+            .layout.grid .left {
+                background: #f40;
+            }
+            .layout.grid .center {
+                background: #ff0;
+            }
+            .layout.grid .right {
+                background: #08c;
+            }
+        </style>
+        <article class="container">
+            <div class="left"></div>
+            <div class="center">
+                <h2>Grid解决方案</h2>
+                <p>这是三栏布局中间部分</p>
+            </div>
+            <div class="right"></div>
+        </article>
+    </section>
+</body>
+</html>
